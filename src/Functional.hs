@@ -74,8 +74,6 @@ elemL = 2 `elem` [1, 2, 3] -- True
 
 notElemL = 2 `notElem` [1, 2, 3]
 
-filterL = filter odd [1, 2, 3, 4]
-
 -- 在Data.List模块中，有三个谓词方法，isPrefixOf、isInfixOf和isSuffixOf，能让我们测试一下子列表在一个更大的列表中出现的位置。
 -- isPrefixOf函数告诉我们左边的列表是否出现在右边的列表的开始处
 isPrefixOfL = "foo" `isPrefixOf` "foobar"
@@ -103,3 +101,26 @@ unlinesL = unlines ["foo", "bar"] -- "foo\nbar\n"
 wordsL = words "the  \r  quick \t  brown\n\n\nfox" -- ["the","quick","brown","fox"]
 
 unwordsL = unwords ["jumps", "over", "the", "lazy", "dog"] -- "jumps over the lazy dog"
+
+--  列表处理
+mapL = map (+ 1) [1, 2, 3, 4]
+
+filterL = filter odd [1, 2, 3, 4]
+
+foldlL = foldl (+) 0 [1, 2, 3, 4]
+
+foldrL = foldr (+) 0 [1, 2, 3, 4]
+
+-- 用foldr表示map
+myFoldrMap :: (a -> b) -> [a] -> [b]
+myFoldrMap f xs = foldr step [] xs
+  where
+    step x xs = f x : xs
+
+-- 用foldr表示foldl，这段比较牛逼，他是折叠了一个函数，最后应用在初始值z上
+myFoldl :: (a -> b -> a) -> a -> [b] -> a
+myFoldl f z xs = foldr step id xs z
+  where
+    step x g a = g (f a x) -- b -> (a -> a) -> a -> a
+
+
