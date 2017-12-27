@@ -27,11 +27,16 @@ char :: Char -> Doc
 char c = Char c
 
 symbol :: Char -> Doc
-symbol '[' = Symbol '['
-symbol ']' = Symbol ']'
-symbol '{' = Symbol '}'
-symbol '}' = Symbol '}'
-symbol ' ' = Symbol ' '
+symbol ','  = Symbol ','
+symbol ':'  = Symbol ':'
+symbol '['  = Symbol '['
+symbol ']'  = Symbol ']'
+symbol '{'  = Symbol '{'
+symbol '}'  = Symbol '}'
+symbol '"'  = Symbol '"'
+symbol '\'' = Symbol '\''
+symbol ' '  = Symbol ' '
+symbol '\n' = Symbol '\n'
 
 text :: String -> Doc
 text "" = Empty
@@ -52,7 +57,7 @@ string = enclose '"' '"' . hcat . map oneChar
 -- eg:
 -- enclose '[' ']' (Text "1") -> Concat (Concat (Char '[') (Text "1")) (Char ']')
 enclose :: Char -> Char -> Doc -> Doc
-enclose left right x = char left <> x <> char right
+enclose left right x = symbol left <> x <> symbol right
 
 -- |将多个 Doc 值拼接成一个，类似列表中的 concat 函数
 -- eg:
@@ -132,7 +137,7 @@ series ::
   -> (a -> Doc) -- ^ f 函数
   -> [a] -- ^ a类型的列表
   -> Doc -- ^ 返回值
-series open close f = enclose open close . fsep . punctuate (char ',') . map f
+series open close f = enclose open close . fsep . punctuate (symbol ',') . map f
 
 punctuate :: Doc -> [Doc] -> [Doc]
 punctuate p []     = []
@@ -158,6 +163,6 @@ group x = flatten x `Union` x
 
 flatten :: Doc -> Doc
 flatten (x `Concat` y) = flatten x `Concat` flatten y
-flatten Line           = Char ' '
+flatten Line           = symbol ' '
 flatten (x `Union` _)  = flatten x
 flatten other          = other
