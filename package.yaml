@@ -2,9 +2,9 @@ name:                realworld-haskell
 version:             0.1.0.0
 github:              "githubuser/realworld-haskell"
 license:             BSD3
-author:              "Author name here"
+author:              "pcz"
 maintainer:          "example@example.com"
-copyright:           "2017 Author name here"
+copyright:           "2017 pcz"
 
 extra-source-files:
 - README.md
@@ -24,7 +24,7 @@ dependencies:
 
 library:
   source-dirs:
-    - modules/ch5
+    - src/ch5
 
 executables:
   realworld-haskell-exe:
