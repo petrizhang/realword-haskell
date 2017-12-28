@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e1a2792-d895-4536-ad70-ca1a50ab2710" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contents/Newtype.hs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/ch6/JSONClass.hs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/TypeClass.hs" afterPath="$PROJECT_DIR$/contents/TypeClass.hs" />
-    </list>
+    <list default="true" id="5e1a2792-d895-4536-ad70-ca1a50ab2710" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.stack-work/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,21 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TypeClass.hs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/contents/TypeClass.hs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONClass.hs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JSONClass.hs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/ch6/JSONClass.hs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+            <state relative-caret-position="1100">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -269,12 +254,12 @@
       <option name="presentableId" value="Default" />
       <updated>1514457222802</updated>
       <workItem from="1514457228388" duration="1927000" />
-      <workItem from="1514459190328" duration="9288000" />
+      <workItem from="1514459190328" duration="9386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11215000" />
+    <option name="totallyTimeSpent" value="11313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="699" y="118" width="960" height="829" extended-state="0" />
@@ -544,18 +529,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/ch6/JSONClass.hs">
+    <entry file="file://$PROJECT_DIR$/contents/TypeClass.hs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+        <state relative-caret-position="1820">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/TypeClass.hs">
+    <entry file="file://$PROJECT_DIR$/modules/ch6/JSONClass.hs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="88" column="25" lean-forward="false" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        <state relative-caret-position="1100">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
