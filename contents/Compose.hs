@@ -1,3 +1,5 @@
+module Compose where
+
 import           Data.List (isPrefixOf, tails)
 
 --"zhang" -> ["zhang","hang","ang","ng","g"]
@@ -24,4 +26,3 @@ r2 = suffixes2 "zhang"
 -- #define DLT_AX25        3       /* Amateur Radio AX.25 */
 dlts :: String -> [String]
 dlts = map (head . tail . words) . filter ("#define DLT_" `isPrefixOf`) . lines
-

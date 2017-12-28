@@ -1,3 +1,5 @@
+module RecurrenceType where
+
 -- 递归类型
 data List a
   = Cons a

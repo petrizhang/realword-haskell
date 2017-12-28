@@ -1,3 +1,5 @@
+module Ex3_2 where
+
 ---------------------------------------------------------------------------------------
 -- 1.写一个函数，用来计算一个列表元素的个数．出于测试要求，保证其输出的结果和标准函数 length 保持一致．
 -- 2.添加函数的类型签名于你的源文件．出于测试要求，再次加载源文件到ghci．
@@ -27,7 +29,9 @@ getMid []  = []
 getMid [x] = [x]
 getMid l   = tail (init l)
 
-isPalindrome :: Eq a => [a] -> Bool
+isPalindrome
+  :: Eq a
+  => [a] -> Bool
 isPalindrome [] = True
 isPalindrome [x] = True
 isPalindrome l = firstE == lastE && isPalindrome midL
@@ -42,7 +46,9 @@ isPalindrome l = firstE == lastE && isPalindrome midL
 -- for input (lx, ly)
 -- get output ([the smaller one in two lists' first elements], remain of lx, remain of ly)
 -- e.g. [1,3] [2,4] -> ([1],[3],[2,4])
-nextBatch :: Ord a => [a] -> [a] -> ([a], [a], [a])
+nextBatch
+  :: Ord a
+  => [a] -> [a] -> ([a], [a], [a])
 nextBatch [] [] = ([], [], [])
 nextBatch [] (y:ys) = ([y], [], ys)
 nextBatch (x:xs) [] = ([x], xs, [])
@@ -51,17 +57,23 @@ nextBatch (x:xs) (y:ys)
   | otherwise = ([y], x : xs, ys)
 
 -- merge two ordered list lx and ly to result
-myMergeHelp :: Ord a => [a] -> [a] -> [a] -> [a]
+myMergeHelp
+  :: Ord a
+  => [a] -> [a] -> [a] -> [a]
 myMergeHelp result [] [] = result
 myMergeHelp result lx ly = myMergeHelp (result ++ smallerHeadListed) xRemain yRemain
   where
     (smallerHeadListed, xRemain, yRemain) = nextBatch lx ly
 
 -- merge 2 ordered list
-myMerge :: Ord a => [a] -> [a] -> [a]
+myMerge
+  :: Ord a
+  => [a] -> [a] -> [a]
 myMerge = myMergeHelp []
 
-myMergeSort :: Ord a => [a] -> [a]
+myMergeSort
+  :: Ord a
+  => [a] -> [a]
 myMergeSort [] = []
 myMergeSort [x] = [x]
 myMergeSort l = myMerge (myMergeSort leftList) (myMergeSort rightList)
@@ -149,8 +161,11 @@ data Direction
 
 ---------------------------------------------------------------------------------------
 -- 10.写一个函数，用于计算三个二维坐标点组成的转向（turn），并且返回其 Direction（方向）．
+skip10 = True
 
-turn (a,b,c) =
 ---------------------------------------------------------------------------------------
 -- 11.定义一个函数，输入二维坐标点的序列并计算其每个连续三个的（方向）Direction．考虑一个点的序列 [a,b,c,d,e]，他应该开始计算 [a,b,c]的转向(turn), 接着计算 [b,c,d]的转向，再是[c,d,e]的．你的函数应该返回一个Direction（方向）的序列．
+skip11 = True
+
 -- 12.运用前面三个练习的代码，实现 Graham 扫描算法，用于扫描由二维点集构成的凸包．你能从 `Wikipedia<http://en.wikipedia.org/wiki/Convex_hull>`_ 上找到＂什么是凸包＂，以及 `＂Graham扫描算法＂<http://en.wikipedia.org/wiki/Graham_scan>`_ 的完整解释
+skip12 = True

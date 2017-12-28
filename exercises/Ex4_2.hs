@@ -1,3 +1,5 @@
+module Ex4_2 where
+
 -- 1.运用 fold （运用合适的fold将会使你的代码更简单）重写并扩展位于＂显式递归＂章节的 asInt 函数
 import           Data.Char   (digitToInt, intToDigit, isDigit)
 import           Text.Printf

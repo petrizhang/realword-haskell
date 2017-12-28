@@ -1,3 +1,5 @@
+module Case where
+
 -- case
 data Fruit
   = Apple

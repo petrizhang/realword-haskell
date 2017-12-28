@@ -24,7 +24,9 @@ dependencies:
 
 library:
   source-dirs:
-    - src/ch5
+    - contents
+    - exercises
+    - modules/ch5
 
 executables:
   realworld-haskell-exe:

@@ -73,8 +73,8 @@ x <> Empty = x
 x <> y = x `Concat` y
 
 -- |fold function f on a Doc list
-fold ::
-     (Doc -> Doc -> Doc) -- ^ f
+fold
+  :: (Doc -> Doc -> Doc) -- ^ f
   -> [Doc] -- ^Doc list
   -> Doc
 fold f = foldr f empty
@@ -131,8 +131,8 @@ line = Line
 -- 然后执行 punctuate (char ',') [d:Doc]，将其使用逗号分隔得到[d1:Doc]
 -- 然后执行 fsep [d1:Doc] 对列表使用软换行分隔并且连接成一个Doc，得到 d2
 -- 然后调用enclose给d2加上首尾(open和close)
-series ::
-     Char -- ^ open 起始符
+series
+  :: Char -- ^ open 起始符
   -> Char -- ^ close 终止符
   -> (a -> Doc) -- ^ f 函数
   -> [a] -- ^ a类型的列表

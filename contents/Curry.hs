@@ -1,3 +1,5 @@
+module Curry where
+
 import           Data.Char
 
 -- 在 Haskell 中，所有函数都只接受一个参数。
@@ -25,4 +27,3 @@ r5 = (^ 3) 2
 r6 = (`elem` ['a' .. 'z']) 'f' -- True
 
 r7 = all (`elem` ['a' .. 'z']) "haskell" -- True
-

@@ -1,3 +1,5 @@
+module LocalVariable where
+
 -- let
 foo =
   let a = 1

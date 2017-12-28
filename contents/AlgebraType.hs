@@ -1,3 +1,5 @@
+module AlgebraType where
+
 -- 代数数据类型
 data BookInfo =
   Book Int
