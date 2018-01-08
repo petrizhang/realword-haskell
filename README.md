@@ -2,7 +2,9 @@
 
 ## 说明
 haskell版本：8.2.0
+
 resolver: lts10.2
+
 stack:1.6.4
 
 这是看"real world haskell"这本书的过程中积累的包括书中实例、习题答案以及功能累积到比较实用的程度然后写成模块的代码集。
