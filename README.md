@@ -45,3 +45,45 @@ stack setup
 stack build
 ```
 构建完成。
+
+注意在第一次导入idea时必须构建完成且不出错。
+
+### 配合idea进行开发
+我用的是
+[intellij-haskell](https://github.com/rikvdkleij/intellij-haskell/blob/master/README.md)
+这个插件，体验还不错，按照链接里的指示配置好就可以导入stack项目愉快玩耍了。
+
+其实就是先在idea里装好插件，然后安装两个haskell的包：
+
+```
+stack install hindent stylish-haskell
+```
+然后idea里依次点Settings>Other Settings>Haskell，设置好这两个命令的路径，它们应该在`~/.local/bin`下。
+
+就可以了。
+
+### 使用ghci进行快速验证
+repl还是很有用的，haskell的repl就是ghci，使用`stack ghci`启动它。
+
+然后就可以敲haskell代码了。
+
+还可以加载haskll源文件:
+```
+:load xxx.hs
+```
+查看帮助:
+```
+:help
+```
+查看变量类型:
+```
+:type xxx
+```
+查看变量/函数/类信息:
+```
+:info xxx
+```
+
+这是最常见的几条命令了。
+
+你可以使用此种方式探索本项目内的各文件。
